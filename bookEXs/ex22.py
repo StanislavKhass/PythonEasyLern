@@ -78,12 +78,26 @@ you_date_move =
 """
 
 #Упражнение 5 - Вывод форматирование через f"Текст {переменная}"
+#https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings
 """
-Дает возможность работать со строками как стипом данных
-print(f"Testing string :{string}")
-print("Testing string :", string)
-print(""" New way: {some_new}
-to {one_more_time} format text""")
+0.Formatted string literals / f- string let you include the value of Python expressions inside a strings
+by prefixing the string with f of F and writing expressions as {expressions}
+
+print(f"Testing string :{expressions}")
+print(""" New way: {expressions1}
+to {expressions2} format text""")
+
+1/The following example rounds pi to three places after the demical
+print(f'The value of  pi is approximately {math.pi:.3f}')
+
+2.a minimum number of characters wide ":" - this useful for making columns line up
+print(f'{name:10} ==> {phone:10d}')
+
+
+3.other modifires:  '!a' - applies ascii() , '!s' - applies str() , '!r' - applies repr()
+
+4. for debugging
+print(f'Debugging {bugs=} {count=} {area=}')
 """
 
 #Упражнение 6 - Продолжение форматирование строки
