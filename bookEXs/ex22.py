@@ -87,7 +87,7 @@ print(f"Testing string :{expressions}")
 print(""" New way: {expressions1}
 to {expressions2} format text""")
 
-1/The following example rounds pi to three places after the demical
+1.The following example rounds pi to three places after the demical
 print(f'The value of  pi is approximately {math.pi:.3f}')
 
 2.a minimum number of characters wide ":" - this useful for making columns line up
@@ -95,6 +95,7 @@ print(f'{name:10} ==> {phone:10d}')
 
 
 3.other modifires:  '!a' - applies ascii() , '!s' - applies str() , '!r' - applies repr()
+print(f'My hovercraft is full of {animals!r}.')
 
 4. for debugging
 print(f'Debugging {bugs=} {count=} {area=}')
