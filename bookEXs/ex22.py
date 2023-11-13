@@ -95,7 +95,7 @@ print(f'{name:10} ==> {phone:10d}')
 
 
 3.other modifires:  '!a' - applies ascii() , '!s' - applies str() , '!r' - applies repr()
-print(f'My hovercraft is full of {animals!r}.')
+# print(f'My hovercraft is full of {animals!r}.')
 
 4. for debugging
 print(f'Debugging {bugs=} {count=} {area=}')
@@ -103,28 +103,44 @@ print(f'Debugging {bugs=} {count=} {area=}')
 
 #Упражнение 6 - Продолжение форматирование строки
 """
+#Можно использовать как рекурсию
 x = "_test1"
 y = f"_test2 {x}"
 z = f"_test3 {y}"
 print(z)
 #Результат: test 3 test2 test1
 строе форматирование строк
-"Test {1} Test {2} Test {3}".format("T1","T2","T3")
-"Test {2} Test {3} Test {1}".format("T1","T2","T3")
-"Test {} Test {} Test {}".format("T1","T2","T3")
-"Test {} Test {} Test {}".format(x,y,z)
-"Test {} Test {} Test {}".format(x="standart1",y="standart2",z="standart3")
 
-# Первый вариант обьявить через print(arg1,"Text", arg2, "Text", arg3)
-# Второй вариант обьявить через f"{arg1} , Text , {arg2}, Text {arg3}"
-# Третий вариант обьявить через "{arg1} , Text , {arg2}, Text {arg3}".format(arg1="значение",arg2="значение",arg3="значение")
+Basic usage str.format()
+print('We are the {} who say "{}!"'.format('knights', 'Ni'))
+#but we can use numbers, index
+print('{0} and {1}'.format('spam', 'eggs'))
+Also we can use name of arguments
+print('This {food} is {adjective}.'.format(food='spam', adjective='absolutely horrible'))
+Or it can be mixed
+print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred', other='Georg'))
+Or use from dictionary
+table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; ''Dcab: {0[Dcab]:d}'.format(table))
+print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
 """
 
 #Упражнение 7 - работа со строками
+#Дополнительное форматирование
 """
+Арифметические действия со строками
 Строки можно складывать через сложение: "T"+"E"+"S"T"="TEST
 Строку можно умножать на число: "TEST"*2 = "TESTTEST"
+#Format string syntax
+Format string contain "replacement fileds" surraunded by curly braces { }
+For using curly braces in literal = use {{ or }}
+Grammer
+replacement_field ::=  "{" [field_name] ["!" conversion] [":" format_spec] "}"
+field_name        ::=  arg_name ("." attribute_name | "[" element_index "]")*
+conversion        ::=  "r" | "s" | "a"
 
+gramer format spec
+format_spec     ::=  [[fill]align][sign]["z"]["#"]["0"][width][grouping_option]["." precision][type]
 
 """
 #Упражнение 8 - практика с работой "{} {} {}".format
@@ -133,15 +149,10 @@ print(z)
 text = "{} {} {} {}"
 text.format(text,text,text) Результат: {} {} {} {} {} {} {} {} {} {} {} {}
 Если задать значения в переменной то придется обьвлять все переменные и подставлять названия переменных в {}
-Будет ошибка
+Будет ошибка, В формате переменная должна быть обьявленна.
 "{} {} {}".format(x=1,y,z)
 Правильный вариант
 "{x} {y} {z}".format(x=1,y=2,z=3)
-либо второй вариант выносить пристваивание переменых за функцию и тогда можно использовать будет индексы
-x=1
-y=2
-z=3
-"{} {} {}".format(x,y,z)
 """
 
 #Упражнение 9-10 - управляющие символы.
@@ -208,3 +219,5 @@ file = open(name_of_file, "mode")
 <fileObject>.write() записываем  строку в файл
 <fileObject>.seek(0) перемещаем каретку в начало
 """
+
+#Упражнение 17 модули

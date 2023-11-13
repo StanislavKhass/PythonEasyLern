@@ -11,8 +11,18 @@ class User:
     def __repr__(self):
         return f"User's name is: {self.first_name} {self.last_name}"
 
-user = User("John", "Doe")
-print(f"{user}")
+
+#user = User("John", "Хасс")
+#print(f"{user}")
 # John Doe
-print(f"{user!r}")
+#print(f"{user!r}")
 # User's name is: John Doe
+
+#print(f"{user!a}")
+
+string = "TEST"
+print(f"{string:#^100}")
+#result for print
+################################################TEST################################################
+string = 452
+print(f"{string:b}")
