@@ -138,9 +138,9 @@ Grammer
 replacement_field ::=  "{" [field_name] ["!" conversion] [":" format_spec] "}"
 field_name        ::=  arg_name ("." attribute_name | "[" element_index "]")*
 conversion        ::=  "r" | "s" | "a"
-
-gramer format spec
 format_spec     ::=  [[fill]align][sign]["z"]["#"]["0"][width][grouping_option]["." precision][type]
+
+
 
 """
 #Упражнение 8 - практика с работой "{} {} {}".format
