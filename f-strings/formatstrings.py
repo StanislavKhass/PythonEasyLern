@@ -51,3 +51,48 @@ print(f"{string:#^#10_b}")
 string = 10010001
 print(f"{string:#050_b}")
 """
+
+"""
+#Научная нотауия для цифр 5. экспонента = сколько цщнаков после точки
+string = 5179
+print(f"{string:*^50_.3G}")
+#5.18E+03
+"""
+
+"""
+#Индексирование данных
+print("{0},{1},{2}".format('a','b','c'))
+print("{},{},{}".format('a','b','c'))
+print("{2},{1},{0}".format('a','b','c'))
+print("{2},{1},{0}".format(*'abc')) # распаковака
+print("{0},{1},{0}".format(*'abc'))
+"""
+"""
+#обращение через переменные
+print('Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W'))
+coord = ['test1', 'test2']
+print('Coordinates: {0}, {0}'.format(*coord))
+coord = {'param1':'test1','param2': 'test2'}
+print('Coordinates: {param1}, {param2}'.format(**coord))
+"""
+
+"""
+#доступ через атрибуты
+c = 3-5j
+print(('The complex number {0} is formed from the real part {0.real} '
+ 'and the imaginary part {0.imag}.').format(c))
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+    def __str__(self):
+        return 'Point({self.x}, {self.y})'.format(self=self)
+
+print(str(Point(4, 2)))
+"""
+"""
+#доступ через индекс аргумента
+coord = [3,4]
+print("X: {0[0]};  Y: {0[1]}".format(coord))
+"""
