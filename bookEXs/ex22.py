@@ -184,6 +184,27 @@ time - для работы со временем. Например задерк�
 sys - для работы с потоком ввода\вывода
 os - работа с операционной системой  - работа с путями файлов
 #Получить список все функций внутри модуля dir()
+
+#https://www.w3schools.com/python/python_modules.asp
+Modules in Python: Creating moduls
+a File containing a set of functions you want to include to you application
+1. Create a modul with function - save the code in file with file extension .py
+2. Use a modul - we can use import statment: import modul_name
+3. Call function from modul: module_name.function_name
+4. Module can contain functions, arrays , dictionaries, objects module_name.object
+
+Naming a module_name
+1. Module can be any name, but have .py file extension
+2. Re-name module , using alias as : import name_module as new_name
+3. now we can use new_name.object
+
+Build-in modules: time, sys, os
+1. Use dir(name_module) to show all variables in modules
+2. The dir() function can use on all modules, also the ones you create youself
+
+Import from module
+1. Import parts from module , using keywords from module_name import object_name
+2. Acess object_name, dont use modele name
 """
 
 #Упражнение 13-14 Получение аргументов из командной строки
