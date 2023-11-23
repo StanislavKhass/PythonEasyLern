@@ -185,26 +185,6 @@ sys - для работы с потоком ввода\вывода
 os - работа с операционной системой  - работа с путями файлов
 #Получить список все функций внутри модуля dir()
 
-#https://www.w3schools.com/python/python_modules.asp
-Modules in Python: Creating moduls
-a File containing a set of functions you want to include to you application
-1. Create a modul with function - save the code in file with file extension .py
-2. Use a modul - we can use import statment: import modul_name
-3. Call function from modul: module_name.function_name
-4. Module can contain functions, arrays , dictionaries, objects module_name.object
-
-Naming a module_name
-1. Module can be any name, but have .py file extension
-2. Re-name module , using alias as : import name_module as new_name
-3. now we can use new_name.object
-
-Build-in modules: time, sys, os
-1. Use dir(name_module) to show all variables in modules
-2. The dir() function can use on all modules, also the ones you create youself
-
-Import from module
-1. Import parts from module , using keywords from module_name import object_name
-2. Acess object_name, dont use modele name
 """
 
 #Упражнение 13-14 Получение аргументов из командной строки
@@ -212,6 +192,7 @@ Import from module
 """
 from sys import argv
 script , arg1 = argv
+#argv хранит список о тех параметраъ которые передали
 """
 
 #Упражнение 15 - Работа с файлами - основной принцип работы с файлами
@@ -242,3 +223,56 @@ file = open(name_of_file, "mode")
 """
 
 #Упражнение 17 модули
+"""
+#https://www.w3schools.com/python/python_modules.asp
+Modules in Python: Creating moduls
+a File containing a set of functions you want to include to you application
+1. Create a modul with function - save the code in file with file extension .py
+2. Use a modul - we can use import statment: import modul_name
+3. Call function from modul: module_name.function_name
+4. Module can contain functions, arrays , dictionaries, objects module_name.object
+
+Naming a module_name
+1. Module can be any name, but have .py file extension
+2. Re-name module , using alias as : import name_module as new_name
+3. now we can use new_name.object
+
+Build-in modules: time, sys, os
+1. Use dir(name_module) to show all variables in modules
+2. The dir() function can use on all modules, also the ones you create youself
+
+Import from module
+1. Import parts from module , using keywords from module_name import object_name
+2. Acess object_name, dont use modele name
+"""
+
+#Упражнение 18 - обьявление функции 19 упражнение работа с функциями
+"""
+#=====Обьявление Функции======
+1. Обьявляем функцию с помощью def
+2. Не может начинаться с цифры \ Латинские буквы и цифры \ Знак подчеркивания \ неможет быть спец символов
+3. после имени идет отрывающая скобка ()
+4. Далее указываем аргументы
+5. Имена аргументов должны быть уникальными
+6 Далее идет закрытие функции ):
+7 Внутри код начинаетс с табуляции или 4 пробелов
+8. ПРоверить что табуляция кончилась если закончился код функции
+
+====== Обьявление функции =====
+1. Укащываем имя функции
+2. Указываем символ ( после начала имени
+3. Указываем имена аргументов в функции так же как и обьявили
+4. Закрываем функцию )
+
+#Выполнить - вызвать - использовать функцию - это одно и тоже
+
+#Вводим и разбираем код.
+"""
+
+#Упражнение 20,22 - Была интересная головоломка
+"""
+#Распакрвака аргументов в функуии
+def print_two(*args):
+    arg1, arg2 = args
+    print(f"arg1: {arg1}, arg2: {arg2}")
+"""
